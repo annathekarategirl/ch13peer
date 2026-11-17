@@ -11,7 +11,7 @@ circle.getRadius());
 System.out.println(circle);
 }
 }
- abstract class GeometricObject {
+ abstract class GeometricObject implements Comparable{
   private String color = "white";
   private boolean filled;
   private java.util.Date dateCreated;
@@ -59,7 +59,12 @@ System.out.println(circle);
     return "created on " + dateCreated + "\ncolor: " + color +
       " and filled: " + filled;
   }
-
+  public int compareTo(GeometricObject o){
+    return 0;
+  }
+  static GeometricObject max(GeometricObject one, GeometricObject two){
+    if()
+  }
   /** Abstract method getArea */
   public abstract double getArea();
 
@@ -69,4 +74,5 @@ System.out.println(circle);
 // Circle.java: The circle class that extends GeometricObject
 class Circle1 extends GeometricObject {
 // Implement it
+
 }
